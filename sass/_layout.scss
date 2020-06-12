@@ -1,0 +1,29 @@
+.container {
+  max-width: 120rem; // maximum width 1200px, if viewport is less that 1200px, container with take up 100%
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+  height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+
+  flex: 0 0 18%;
+}
+
+.hotel-view {
+  background-color: #fff;
+
+  flex: 1;
+}
