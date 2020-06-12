@@ -1,0 +1,90 @@
+//////// Logo
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem;
+}
+
+///////// Search
+.search {
+  flex: 0 0 40%; // grow or shrink occupy 40%
+
+  display: flex;
+  justify-content: center; // aligns in center of container so both sides transform out on focus
+  align-items: center; // aligns magnifing glass in center of cross axis
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit; // inputs dont inherit font properties from global
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.25rem; // move magnifing glass to left
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::placeholder {
+      // change placeholder properties
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    // if input is in focus the immediate sibling (button) icon background color matches
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); // change icon color
+  }
+}
+
+////////// User Navigation
+.user-nav {
+  background-color: greenyellow;
+
+  &__icon-box {
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  &__notification {
+  }
+
+  &__user {
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
+
+  &__user-name {
+  }
+}
