@@ -108,9 +108,6 @@
     align-items: center;
   }
 
-  &__user {
-  }
-
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
@@ -119,4 +116,27 @@
   &__user-name {
     margin-left: 1rem;
   }
+}
+
+////////// Side Navigation
+.side-nav {
+  list-style: none;
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}
+
+////////// Legal Text
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
 }
