@@ -302,3 +302,73 @@
     box-shadow: none;
   }
 }
+
+////////// Paragraph
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+////////// List
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%; // sets items to 50% so they line up in 2 rows
+    margin-bottom: 0.7rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+
+    // Older Browsers that can't do masks (with this you can't change the svg color)
+    // background-image: url(../img/chevron-thin-right.svg);
+    // background-size: cover;
+
+    // Newer browsers - masks
+    background-color: var(--color-primary);
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+  }
+}
+
+////////// Recommend
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto; // have to remember this instead of justify-content: space-between;
+  }
+
+  &__friends {
+  }
+
+  &__photo {
+    box-sizing: content-box; // added because added border makes images smaller because border-box, this puts the border back on the outside of image
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
